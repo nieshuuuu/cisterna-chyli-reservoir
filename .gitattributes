@@ -1,0 +1,19 @@
+# core.autocrlf=true on the lab Windows box would hand every checked-out text file CRLF
+# endings. That is right for .bat and .ps1 and WRONG for shell scripts: a CRLF after the
+# shebang makes the Mac/Linux launcher fail with "bad interpreter: no such file or directory".
+# Pin the endings per type so a checkout on either platform produces runnable files.
+
+*.sh   text eol=lf
+*.bat  text eol=crlf
+*.ps1  text eol=crlf
+*.py   text eol=lf
+*.md   text
+*.json text eol=lf
+
+# binary payloads: never touch, never diff as text
+*.npz  binary
+*.png  binary
+*.gif  binary
+*.jpg  binary
+*.mat  binary
+*.dcm  binary

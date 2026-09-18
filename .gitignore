@@ -1,0 +1,18 @@
+# Data — never commit; the SMB archive is the single source
+data/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+cc_contexts/
+
+# Third-party papers: kept locally, never committed
+paper/
